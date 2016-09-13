@@ -78,8 +78,9 @@ public class PercolationVisualizer {
         while (!in.isEmpty()) {
             int i = in.readInt();
             int j = in.readInt();
-            if(count == 4){
-            	StdOut.println(perc.isFull(3, 1));
+            if(count == 18){
+            	StdOut.println(perc.percolates());
+//            	StdOut.println(perc.isFull(6, 1));
             }
             perc.open(i, j);
             draw(perc, n);
@@ -87,5 +88,6 @@ public class PercolationVisualizer {
             StdDraw.pause(DELAY);
             count++;
         }
+        StdOut.println(perc.percolates());
     }
 }
